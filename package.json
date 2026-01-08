@@ -1,0 +1,26 @@
+{
+  "name": "sodeca-exam-portal",
+  "version": "1.0.0",
+  "description": "The Sodeca Exam Portal was a client-based project my team built to streamline online exams. I developed the scheduling and timer module, added secure role-based authentication, and assisted in integration testing. Using agile practices and GitHub, we delivered a responsive system with real-time analytics that reduced errors and satisfied the client",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
+  }
+}
