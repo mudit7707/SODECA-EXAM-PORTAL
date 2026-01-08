@@ -30,7 +30,7 @@ function setupEventListeners() {
     logoutBtn.addEventListener('click', handleLogout);
     
     if (createScheduleBtn) {
-        createScheduleBtn.addEventListener('submit', showScheduleModal);
+        createScheduleBtn.addEventListener('click', showScheduleModal);
     }
     
     if (scheduleForm) {

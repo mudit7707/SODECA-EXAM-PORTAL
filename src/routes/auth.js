@@ -21,9 +21,12 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // For demo purposes, accept any password (in production, use bcrypt.compare)
-    // const isValid = await bcrypt.compare(password, user.password);
-    const isValid = true; // Simplified for demo
+    // Simple password validation for demo (check against expected demo passwords)
+    let isValid = false;
+    if (username === 'admin' && password === 'admin123') isValid = true;
+    if (username === 'teacher1' && password === 'teacher123') isValid = true;
+    if (username === 'student1' && password === 'student123') isValid = true;
+    // For production, use: const isValid = await bcrypt.compare(password, user.password);
 
     if (!isValid) {
       return res.status(401).json({ error: 'Invalid credentials' });
